@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CollectionPageContainer = styled.div`
-  display: flex;
+  display: grid;
   flex-direction: column;
 `;
 
@@ -17,5 +17,14 @@ export const CollectionItemsContainer = styled.div`
 
   & > div {
     margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 95vw;
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
 `;
